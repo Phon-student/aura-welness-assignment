@@ -87,7 +87,7 @@ This is an Internal Knowledge Assistant (Option C) that allows employees to ask 
 ```bash
 # Clone and start
 git clone <repo-url>
-cd aura
+cd aura-welness-assignment
 
 # Start all services
 docker compose up --build
