@@ -195,3 +195,7 @@ docker compose down
 # To also remove volumes:
 docker compose down -v
 ```
+
+### Debugging Notes
+
+- **`sentence-transformers` version**: The original `sentence-transformers==2.2.2` dependency caused an `ImportError` at startup (`cannot import name 'cached_download' from 'huggingface_hub'`). This was due to the older version relying on the deprecated `huggingface_hub.cached_download` API, which has been removed in recent `huggingface_hub` releases. Fixed by upgrading to `sentence-transformers==3.3.1` in `src/backend/requirements.txt`.
